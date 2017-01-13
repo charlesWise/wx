@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <!--swiper start-->
+  <view class="banner-wrap">
+    <swiper
+      bindchange="swiperChange"
+      autoplay="{{autoplay}}"
+      interval="{{interval}}"
+      duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="*this">
+        <swiper-item>
+          <image mode="aspectFill" src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class="swipe-btn-wrapper">
+      <view class="swipe-btn-list">
+        <view class="{{dotsClass[0]}}"></view>
+        <view class="{{dotsClass[1]}}"></view>
+        <view class="{{dotsClass[2]}}"></view>
+      </view>
+    </view>
+  </view>
+  <!--swiper end-->
+</view>
