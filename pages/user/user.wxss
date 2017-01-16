@@ -12,3 +12,7 @@
 .userinfo-nickname {
   color: #aaa;
 }
+.addr{
+  margin-top: 20px;
+  text-align: center;
+}

@@ -24,5 +24,11 @@ Page({
   },
   onLoad() {
     console.log('app', app);
+  },
+  //事件处理函数
+  goIndex() {
+    wx.navigateTo({
+      url: '../user/user'
+    })
   }
 })

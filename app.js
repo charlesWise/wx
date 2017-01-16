@@ -3,13 +3,13 @@ App({
   //程序初始化的时候执行执行onLaunch里面的代码
   onLaunch() {
     //调用API从本地缓存中获取数据
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    var lists = wx.getStorageSync('lists') || []
+    lists.unshift(Date.now())
+    wx.setStorageSync('lists', lists)
   },
   //定义的全局方法在pages里面的都是可以调用
   getUserInfo(cb){
-    var that = this
+    var that = this;
     if(this.globalData.userInfo){
       typeof cb == "function" && cb(this.globalData.userInfo)
     }else{
